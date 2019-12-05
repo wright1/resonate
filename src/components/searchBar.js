@@ -50,7 +50,7 @@ cursor: pointer;
 const SearchBar = props => {
     const {setResult} = props;
     const [input, setInput] = useState("");
-    const baseApi =`https://api.soundcloud.com/tracks.json?client_id=${REACT_APP_API_KEY}&q=${input}&limit=15`;
+    const baseApi =`https://api.soundcloud.com/tracks.json?client_id=${process.env.REACT_APP_API_KEY}&q=${input}&limit=15`;
 // sets user input to state
  const userInput = (e) => {
    setInput(e.target.value);
