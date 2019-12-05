@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { GlobalStyle } from "./styles/globalStyles";
+import Header from "./components/heading";
+import SearchBar from "./components/searchBar";
+import ResultCard from "./components/resultCard";
 
-function App() {
+
+const App = () => {
+  
+  const [result, setResult] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalStyle />
+    <Header />
+    <SearchBar
+    setResult={setResult}
+     />
+     {
+       result.map((ele) => {
+        // eslint-disable-next-line react/jsx-key
+        return <ResultCard
+          key={ele.id}
+          imgScr={ele.artwork_url}
+          title={ele.title}
+          link={ele.permalink_url}
+          />
+       })
+     }
+  </>
   );
 }
 
