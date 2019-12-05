@@ -34,4 +34,4 @@ const Header = () => (
 
     </HeadDiv>
 )
-export default Header
+export default Header;
