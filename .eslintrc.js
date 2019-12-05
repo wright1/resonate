@@ -19,6 +19,8 @@ module.exports = {
 		"react/prop-types": [0],
 		"no-underscore-dangle": [0],
 		"react/prefer-stateless-function": [0],
+		"no-undef": 0,
+		"import/no-extraneous-dependencies": 0,
 		//  allow .js extensions for JSX.
 		"react/jsx-filename-extension": [
 			1,

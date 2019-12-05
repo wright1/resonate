@@ -11,7 +11,7 @@ background-color: #C3CEDA;
 align-items: center;
 justify-content: center;
 `;
-const Title = styled.h1`
+export const Title = styled.h1`
 font-family: 'Bebas Neue', cursive;
 font-size: 3rem;
 color: #071330;
