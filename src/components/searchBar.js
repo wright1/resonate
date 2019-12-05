@@ -40,6 +40,9 @@ border: 1px solid #0C4160;
 border-radius: 2px;
 outline: none;
 cursor: pointer;
+&:hover{
+  background-color: #E1C340;
+}
 @media (min-width: 1024px) {
   margin-left: -17rem;
 }

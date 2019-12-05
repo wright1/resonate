@@ -27,8 +27,14 @@ const Span = styled.span`
 font-family: 'Bebas Neue', cursive; 
 `;
 const PgLink = styled.a`
-font-family: 'Open Sans', san serif;
+font-family: 'Bebas Neue', san serif;
+font-size: 1.3rem;
+padding-bottom: 0.4rem;
 text-decoration: none;
+color: #0C4160;
+&:hover {
+    color: #E1C340;
+}
 `;
 const ResultCard = ({imgScr, title, link}) => {
     return(
