@@ -50,18 +50,11 @@ cursor: pointer;
 const SearchBar = props => {
     const {setResult} = props;
     const [input, setInput] = useState("");
-    const baseApi =`https://api.soundcloud.com/tracks.json?client_id=${process.env.REACT_APP_API_KEY}&q=${input}&limit=15`;
+    const baseApi =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${input}`;
 // sets user input to state
  const userInput = (e) => {
    setInput(e.target.value);
  };
- const filterArr = (arr) => {
-   const imageFilter = (item) => {
-     return item.artwork_url? true: false;
-   };
-   return arr.filter(imageFilter);
-
- }
  // api request - result is set to state
  const fetchData = (e) => {
    const top = e.target.parentNode.parentNode
@@ -76,8 +69,7 @@ const SearchBar = props => {
    // filters and set results into state
       fetch(baseApi)
        .then(res =>res.json())
-       .then(json => filterArr(json))
-       .then(arr => setResult(arr));
+       .then(json => setResult(json.data));
  }
    return(
    <SearchDiv>

@@ -36,12 +36,12 @@ color: #0C4160;
     color: #E1C340;
 }
 `;
-const ResultCard = ({imgScr, title, link}) => {
+const ResultCard = ({imgScr, title, link, track}) => {
     return(
         <CardWrapper>
             <Image src={imgScr} alt="track image" />
             <Span>{title}</Span>
-    <PgLink href={link}>Music page</PgLink>
+<PgLink href={link}>{ track }</PgLink>
 
         </CardWrapper>
     )

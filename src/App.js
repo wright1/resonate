@@ -20,9 +20,10 @@ const App = () => {
         // eslint-disable-next-line react/jsx-key
         return <ResultCard
           key={ele.id}
-          imgScr={ele.artwork_url}
-          title={ele.title}
-          link={ele.permalink_url}
+          imgScr={ele.album.cover_medium}
+          title={ele.artist.name}
+          track={ele.title}
+          link={ele.preview}
           />
        })
      }
