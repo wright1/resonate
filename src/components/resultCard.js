@@ -13,6 +13,7 @@ border: 0.3px solid #738FA7;
 border-radius: 1rem;
 box-shadow: 10px 10px 23px -5px rgba(195,206,218,0.85);
 padding-top: 1rem;
+padding-bottom: 1rem;
 @media (min-width: 1024px) {
     width: 35vw;
 }
