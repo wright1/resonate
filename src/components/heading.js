@@ -29,7 +29,7 @@ const Header = () => (
             Resonate
         </Title>
         <Span>
-            for those that like to listen
+            for those who like to listen
         </Span>
 
     </HeadDiv>
